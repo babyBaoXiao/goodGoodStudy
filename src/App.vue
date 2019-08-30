@@ -1,7 +1,8 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+    <img alt="Vue logo" src="./assets/logo.png" @click="handleClick">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -12,6 +13,11 @@ export default {
   name: 'app',
   components: {
     HelloWorld
+  },
+  methods: {
+    handleClick() {
+      this.$router.push('index')
+    }
   }
 }
 </script>
